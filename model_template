@@ -1,0 +1,38 @@
+
+class Model{section}{name} extends Model{
+
+
+
+        public function add($data)
+        {
+
+            $this->db->query({insert_query});
+
+            return $this->db->getLastId();
+        }
+
+        public function edit($id,$data)
+        {
+            $this->db->query({update_query});
+        }
+
+        public function get{name}($id)
+        {
+            $result = $this->db->query({get_query});
+            return $result->row;
+        }
+
+        public function get{name}s()
+        {
+            $result = $this->db->query({get_many_query});
+            return $result->rows;
+        }
+
+        public function delete($id)
+        {
+
+            $this->db->query({delete_query});
+        }
+
+
+}
